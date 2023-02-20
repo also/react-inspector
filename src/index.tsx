@@ -13,6 +13,14 @@ import { ObjectName } from './object/ObjectName';
 
 export { TableInspector, ObjectInspector, ObjectLabel, ObjectPreview, ObjectRootLabel, ObjectValue, ObjectName };
 
+export { TreeView } from './tree-view/TreeView';
+
+export { useStyles } from './styles';
+
+export { createIterator, defaultNodeRenderer } from './object-inspector/ObjectInspector';
+
+export { themeAcceptor } from './styles';
+
 import React, { ComponentProps, FC } from 'react';
 import isDOM from 'is-dom';
 

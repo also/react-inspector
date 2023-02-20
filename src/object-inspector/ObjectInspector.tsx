@@ -9,7 +9,7 @@ import { getPropertyValue } from '../utils/propertyUtils';
 
 import { themeAcceptor } from '../styles';
 
-const createIterator = (showNonenumerable: any, sortObjectKeys: any) => {
+export const createIterator = (showNonenumerable: any, sortObjectKeys: any) => {
   const objectIterator = function* (data: any) {
     const shouldIterate = (typeof data === 'object' && data !== null) || typeof data === 'function';
     if (!shouldIterate) return;
@@ -86,7 +86,7 @@ const createIterator = (showNonenumerable: any, sortObjectKeys: any) => {
   return objectIterator;
 };
 
-const defaultNodeRenderer = ({ depth, name, data, isNonenumerable }: any) =>
+export const defaultNodeRenderer = ({ depth, name, data, isNonenumerable }: any) =>
   depth === 0 ? (
     <ObjectRootLabel name={name} data={data} />
   ) : (
